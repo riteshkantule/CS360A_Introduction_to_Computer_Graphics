@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>WebGL simpleCanvas</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="Assignment_1.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <canvas
+      id="Assignment_1"
+      style="border: none"
+      width="500"
+      height="500"
+    ></canvas>
+    <h3>Change Draw Mode:</h3>
+    <div>
+    <button id="pointsButton" onclick="changeDrawMode(0)">Show Points</button>
+    <button id="wireframeButton" onclick="changeDrawMode(1)">Show Wireframe</button>
+    <button id="solidButton" onclick="changeDrawMode(2)">Show Solid</button>
+    </div>
+  </body>
+</html>

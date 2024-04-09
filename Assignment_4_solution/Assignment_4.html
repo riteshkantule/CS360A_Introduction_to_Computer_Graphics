@@ -1,0 +1,61 @@
+<!-- Assignment-4
+Name: Kantule Ritesh Ramdas
+Roll No- 210488 -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment_1</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="Assignment_4.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <div style>
+    <canvas
+      id="Assignment_4"
+      style="border: none"
+      width="600"
+      height="600"
+    ></canvas>
+    <br>Background Image   <input type = "file" id = "fileInput" onchange = "loadBackgroundImage(event)"></br>
+    <br>Foreground Image   <input type = "file" id = "fileInput2" onchange = "loadForegroundImage(event)"></br>
+    <h5>Image Mode
+    <br>
+    <input type="radio" name="imageMode" onclick="backgroundTexture()">
+    Background Only
+    <input type="radio" name="imageMode" onclick="alphaBlending()">
+    Alpha Blended    
+    </br>
+    </h5>
+    GrayScale
+    <input type="checkbox" name="imageProcess" onclick="greyScaleFilter()">
+    Sepia
+    <input type="checkbox" name="imageProcess" onclick="sepiaFilter()">
+    <br>    
+    Contrast 
+    <class = "sliders">
+      <input autocomplete="off" type="range" min="-50" max="50" value="0" id="contrast">
+    <br> Brightness
+      <input autocomplete="off" type="range" min="1" max="30" value="10" id="brightness">
+    </class>
+    <h3>Process Background Image:</h3>
+    <br>Smooth
+    <input type="checkbox" name="imageProcess" onclick="smoothFilter()">
+    Sharpen
+    <input type="checkbox" name="imageProcess" onclick="sharpenFilter()">
+    Gradient
+    <input type="checkbox" name="imageProcess" onclick="gradientFilter()">
+    Laplacian
+    <input type="checkbox" name="imageProcess" onclick="laplacianFilter()">
+    </br>
+
+    <br>
+    <button onclick="reset()">Reset Scene</button>
+    <button onclick="save()">Save Screenshot</button>
+  </br>
+  </div>
+  </body>
+</html>
